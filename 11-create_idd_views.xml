@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+<changeSet  author="ln8fmk" id="create_view_vw_number_range 01	">
+   <sqlFile encoding="UTF-8"
+            endDelimiter="\nGO"
+			path=".\\11-create_view_vw_number_range.sql"
+            relativeToChangelogFile="true"/>
+</changeSet>
+<changeSet  author="ln8fmk" id="create_view_vw_number_range_protocol 02	">
+   <sqlFile encoding="UTF-8"
+            endDelimiter="\nGO"
+			path=".\\12-create_view_vw_number_range_protocol.sql"
+            relativeToChangelogFile="true"/>
+</changeSet>
+<changeSet  author="ln8fmk" id="create_view_vw_order_number 03	">
+   <sqlFile encoding="UTF-8"
+            endDelimiter="\nGO"
+			path=".\\13-create_view_vw_order_number.sql"
+            relativeToChangelogFile="true"/>
+</changeSet>
+<changeSet  author="ln8fmk" id=" create_view_vw_order_number_counter 04	">
+   <sqlFile encoding="UTF-8"
+            endDelimiter="\nGO"
+			path=".\\14-create_view_vw_order_number_counter.sql"
+            relativeToChangelogFile="true"/>
+</changeSet>
+<changeSet  author="ln8fmk" id="create_view_vw_order_number_protocol 01	">
+   <sqlFile encoding="UTF-8"
+            endDelimiter="\nGO"
+			path=".\\15-create_view_vw_order_number_protocol.sql"
+            relativeToChangelogFile="true"/>
+</changeSet>
+</databaseChangeLog>

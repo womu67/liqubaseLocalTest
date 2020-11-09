@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="ZP622381 (generated)" id="03-create-number-range-1">
+        <createTable tableName="number_range">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="number_range_pkey"/>
+            </column>
+            <column name="changed_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="exhausted" type="BOOLEAN"/>
+            <column name="first_number" type="BIGINT"/>
+            <column name="last_assigned_number" type="BIGINT"/>
+            <column name="last_number" type="BIGINT"/>
+            <column name="postfix" type="VARCHAR(255)"/>
+            <column name="prefix" type="VARCHAR(255)"/>
+            <column name="range_type" type="VARCHAR(255)"/>
+            <column name="recyclable" type="BOOLEAN"/>
+            <column name="remark" type="VARCHAR(255)"/>
+            <column name="version" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="ZP622381 (generated)" id="03-create-number-range-2">
+        <createTable tableName="number_range_protocol">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="number_range_protocol_pkey"/>
+            </column>
+            <column name="last_modification_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="created_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="first_entry" type="VARCHAR(255)"/>
+            <column name="interval_end_counter" type="BIGINT"/>
+            <column name="interval_start_counter" type="BIGINT"/>
+            <column name="last_entry" type="VARCHAR(255)"/>
+            <column name="mail_center" type="VARCHAR(255)"/>
+            <column name="pod_number" type="VARCHAR(255)"/>
+            <column name="range_type" type="VARCHAR(255)"/>
+            <column name="ucp" type="VARCHAR(255)"/>
+            <column name="version" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

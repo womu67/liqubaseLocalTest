@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+  <changeSet author="ZP622381 (generated)" id="04-insert-number-range-1">
+    <insert tableName="number_range">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="exhausted" value="false"/>
+      <column name="first_number" value="0"/>
+      <column name="last_assigned_number" value="0"/>
+      <column name="last_number" value="9999"/>
+      <column name="postfix" value="DE"/>
+      <column name="prefix" value="LA"/>
+      <column name="range_type" value="S10ID_TRACKED"/>
+      <column name="recyclable" value="true"/>
+      <column name="remark" value=""/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="number_range">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="exhausted" value="false"/>
+      <column name="first_number" value="10000"/>
+      <column name="last_assigned_number" value="10000"/>
+      <column name="last_number" value="19999"/>
+      <column name="postfix" value="DE"/>
+      <column name="prefix" value="UA"/>
+      <column name="range_type" value="S10ID_UNTRACKED"/>
+      <column name="recyclable" value="true"/>
+      <column name="remark" value=""/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="number_range">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="exhausted" value="false"/>
+      <column name="first_number" value="20000"/>
+      <column name="last_assigned_number" value="20000"/>
+      <column name="last_number" value="29999"/>
+      <column name="postfix" value="DE"/>
+      <column name="prefix" value="RY"/>
+      <column name="range_type" value="S10ID_SIGNED"/>
+      <column name="recyclable" value="true"/>
+      <column name="remark" value=""/>
+      <column name="version" value="0"/>
+    </insert>
+  </changeSet>
+  <changeSet author="ZP622381 (generated)" id="04-insert-number-range-2">
+    <insert tableName="number_range">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="exhausted" value="false"/>
+      <column name="first_number" value="100000000"/>
+      <column name="last_assigned_number" value="100000000"/>
+      <column name="last_number" value="499999999"/>
+      <column name="postfix" value=""/>
+      <column name="prefix" value="0340217777"/>
+      <column name="range_type" value="SSCC_AM_MANAGED"/>
+      <column name="recyclable" value="true"/>
+      <column name="remark" value=""/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="number_range">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="exhausted" value="false"/>
+      <column name="first_number" value="500000000"/>
+      <column name="last_assigned_number" value="500000000"/>
+      <column name="last_number" value="999999999"/>
+      <column name="postfix" value=""/>
+      <column name="prefix" value="0340217777"/>
+      <column name="range_type" value="SSCC_MANUAL"/>
+      <column name="recyclable" value="true"/>
+      <column name="remark" value=""/>
+      <column name="version" value="0"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+  <changeSet author="ZP622381 (generated)" id="02-insert-order-number-1">
+    <insert tableName="order_number_counter">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="counter_value" value="0"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="number_type" value="EXTERNAL_ORDER"/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="order_number_counter">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="counter_value" value="0"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="number_type" value="REVENUE_PROTECTION_ORDER"/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="order_number_counter">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="counter_value" value="0"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="number_type" value="INVOICING_ORDER"/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="order_number_counter">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="counter_value" value="0"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="number_type" value="STATISTICAL_BILLING_ORDER"/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="order_number_counter">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="counter_value" value="0"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="number_type" value="COLLECTION_ORDER"/>
+      <column name="version" value="0"/>
+    </insert>
+    <insert tableName="order_number_counter">
+      <column name="id" valueComputed="nextval('hibernate_sequence')"/>
+      <column name="changed_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="counter_value" value="0"/>
+      <column name="created_on" valueDate="CURRENT_TIMESTAMP"/>
+      <column name="number_type" value="STORAGE_ORDER"/>
+      <column name="version" value="0"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

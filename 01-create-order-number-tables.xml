@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+  <changeSet author="ZP622381 (generated)" id="01-create-order-number-1">
+    <createTable tableName="order_number">
+      <column name="id" type="BIGINT">
+        <constraints nullable="false" primaryKey="true" primaryKeyName="order_number_pkey"/>
+      </column>
+      <column name="acknowledged_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+      <column name="expires_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+      <column name="number_type" type="VARCHAR(255)"/>
+      <column name="order_number" type="VARCHAR(255)"/>
+      <column name="reserved_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+      <column name="status" type="VARCHAR(255)"/>
+      <column name="ucp" type="VARCHAR(10)"/>
+      <column name="version" type="INTEGER">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+  <changeSet author="ZP622381 (generated)" id="01-create-order-number-2">
+    <createTable tableName="order_number_protocol">
+      <column name="id" type="BIGINT">
+        <constraints nullable="false" primaryKey="true" primaryKeyName="order_number_protocol_pkey"/>
+      </column>
+      <column name="created_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+      <column name="protocol_entry" type="VARCHAR(255)"/>
+      <column name="order_number_id" type="BIGINT"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="ZP622381 (generated)" id="01-create-order-number-3">
+    <createTable tableName="order_number_counter">
+      <column name="id" type="BIGINT">
+        <constraints nullable="false" primaryKey="true" primaryKeyName="order_number_counter_pkey"/>
+      </column>
+      <column name="changed_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+      <column name="counter_value" type="BIGINT"/>
+      <column name="created_on" type="TIMESTAMP WITHOUT TIME ZONE"/>
+      <column name="number_type" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="version" type="INTEGER">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+  <changeSet author="ZP622381 (generated)" id="01-create-order-number-4">
+    <addForeignKeyConstraint baseColumnNames="order_number_id" baseTableName="order_number_protocol" constraintName="fkgkf373f213x3qi0oqdc9wyfre"
+      deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id"
+      referencedTableName="order_number" validate="true"/>
+  </changeSet>
+  <changeSet author="ZP622381 (generated)" id="01-create-order-number-5">
+    <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1"
+      sequenceName="hibernate_sequence" startValue="1"/>
+  </changeSet>
+  <changeSet author="ZP622381" id="01-create-order-number-6">
+    <createIndex indexName="order_number_nt_on_idx" tableName="order_number" unique="true">
+      <column name="number_type"/>
+      <column name="order_number"/>
+    </createIndex>
+  </changeSet>
+</databaseChangeLog>

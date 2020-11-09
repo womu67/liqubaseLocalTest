@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+<changeSet  author="ln8fmk" id="01	">
+   <createView encoding="UTF-8"  
+            fullDefinition="true"  
+            replaceIfExists="false"  
+            viewName="vw_number_range1">SELECT id, changed_on, created_on, exhausted, first_number, last_number, postfix, range_type, recyclable, version FROM number_range</createView>  
+</changeSet>
+
+
+</databaseChangeLog>
