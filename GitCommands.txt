@@ -1,0 +1,20 @@
+
+C:\Programme\Oracle\VirtualBox\VBoxManage.exe modifyhd "C:\[Pfad zum Volume].vdi" --resize 51200 
+
+  
+C:\Users\WolfM\VirtualBox VMs\Ubuntu2-Klon-Klon
+
+VBoxManage.exe modifyhd "C:\Users\WolfM\VirtualBox VMs\Ubuntu2-Klon-Klon\Ubuntu2-Klon-Klon-disk1.vdi" --resize 51200
+
+  git config --global user.email Wolfgang.Mutsch@gmx.net
+  git config --global user.name womu67
+  git checkout MyNewBranch
+  git --help
+  git log
+  
+  git remote add origin https://github.com/womu67/liqubaseLocalTest.git
+  git branch -M main
+  git push -u origin main
+  
+  git status
+  git add .
