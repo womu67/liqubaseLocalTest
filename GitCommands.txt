@@ -1,10 +1,4 @@
-
-C:\Programme\Oracle\VirtualBox\VBoxManage.exe modifyhd "C:\[Pfad zum Volume].vdi" --resize 51200 
-
-  
-C:\Users\WolfM\VirtualBox VMs\Ubuntu2-Klon-Klon
-
-VBoxManage.exe modifyhd "C:\Users\WolfM\VirtualBox VMs\Ubuntu2-Klon-Klon\Ubuntu2-Klon-Klon-disk1.vdi" --resize 51200
+BoxManage.exe modifyhd "C:\Users\WolfM\VirtualBox VMs\Ubuntu2-Klon-Klon\Ubuntu2-Klon-Klon-disk1.vdi" --resize 51200
 
   git config --global user.email Wolfgang.Mutsch@gmx.net
   git config --global user.name womu67
@@ -18,3 +12,21 @@ VBoxManage.exe modifyhd "C:\Users\WolfM\VirtualBox VMs\Ubuntu2-Klon-Klon\Ubuntu2
   
   git status
   git add .
+  
+  git  commit -m "Added GitCommands"
+  git push -u origin MyNewBranch
+  git checkout MyNewBranch
+  git checkout main
+  git merge MyNewBranch
+  git push -u origin master
+  git  branch -d MyNewBranch
+  
+  
+email services are replaced and new options introduced. The new option is Github - Repository - Settings - Notification - add your email-ID
+Today we will learn
+How to trigger notification email from github 
+whenever there is any change/commit in the project
+
+Step 1 : Github - Repository - Settings - integration & services - add email 
+
+Step 2 : Test and validate by making some change in the project
