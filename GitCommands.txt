@@ -35,4 +35,4 @@ Step 2 : Test and validate by making some change in the project
 Testing TortoiseGIT
 =======
 Step 2 : Test and validate by making some change in the project
->>>>>>> e0f6f8afb6c66365b97d4af846b62b762fff0e5d
+Test TortoiseGIT 
